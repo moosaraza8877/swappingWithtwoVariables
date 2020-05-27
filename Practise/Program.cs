@@ -10,20 +10,37 @@ namespace Practise
     {
         static void Main(string[] args)
         {
-            int a, b;
-            Console.Write("Enter first value: ");
-            a = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter second value: ");
-            b = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("----- Before swapping -----");
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            a = a + b;
-            b = a - b;
-            a = a - b;
-            Console.WriteLine("----- After swapping -----");
-            Console.WriteLine(a);
-            Console.WriteLine(b);
+            int n, count = 1;
+            Console.Write("Enter number of rows: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            count = n - 1;
+            for(int k = 1; k <= n; k++)
+            {
+                for(int i = 1; i <= count; i++)
+                {
+                    Console.Write(" ");
+                }
+                count--;
+                for (int i = 1; i <= 2 * k - 1; i++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            count = 1;
+            for(int k = 1; k <= n - 1; k++)
+            {
+                for(int i = 1; i <= count; i++)
+                {
+                    Console.Write(" ");
+                }
+                count++;
+                for (int i = 1; i <= 2 * (n - k) - 1; i++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
